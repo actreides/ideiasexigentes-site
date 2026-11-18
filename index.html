@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ideias Exigentes — Software independente</title>
+<meta name="description" content="Ideias Exigentes Unipessoal Lda — empresa portuguesa de desenvolvimento de software. As nossas aplicações são publicadas sob a marca IDTECHX.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111827'/%3E%3Crect x='9' y='8' width='3' height='16' fill='%23c8553d'/%3E%3Crect x='15' y='8' width='9' height='3' fill='%23fff'/%3E%3Crect x='15' y='14.5' width='7' height='3' fill='%23fff'/%3E%3Crect x='15' y='21' width='9' height='3' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root{--ink:#111827;--body:#374151;--muted:#6b7280;--line:#e5e7eb;--accent:#c8553d;--bg:#fbfaf8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--body);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+  header{border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .brand .bar{width:3px;height:30px;background:var(--accent)}
+  .brand span{font-weight:700;letter-spacing:.28em;font-size:15px;color:var(--ink)}
+  nav{display:flex;align-items:center;gap:28px;font-size:14px}
+  nav a{text-decoration:none;color:var(--muted)}
+  nav a:hover{color:var(--ink)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{border:0;background:none;font:inherit;font-size:12px;letter-spacing:.08em;padding:5px 12px;cursor:pointer;color:var(--muted)}
+  .lang button.on{background:var(--ink);color:#fff}
+  .hero{padding:120px 0 104px}
+  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+  h1{font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:var(--ink);font-weight:700;max-width:14ch}
+  .lead{font-size:19px;max-width:56ch;margin-top:28px;color:var(--body)}
+  .rule{width:44px;height:3px;background:var(--accent);margin:44px 0 0}
+  section{padding:88px 0;border-top:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:240px 1fr;gap:48px}
+  h2{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);font-weight:700;padding-top:6px}
+  .content p{font-size:17px;max-width:62ch}
+  .content p+p{margin-top:16px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+  .card h3{font-size:16px;color:var(--ink);margin-bottom:6px}
+  .card p{font-size:14px;color:var(--muted)}
+  .tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-top:12px;font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:10px;margin-top:34px;padding:13px 22px;background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;font-size:14px;letter-spacing:.04em}
+  .btn:hover{background:#000}
+  dl{display:grid;grid-template-columns:140px 1fr;gap:12px 24px;font-size:16px}
+  dt{color:var(--muted)}
+  dd a{color:var(--accent);text-decoration:none;font-weight:600}
+  footer{border-top:1px solid var(--line);padding:40px 0 56px;font-size:13px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer a{color:var(--muted)}
+  [data-l="en"]{display:none}
+  body.en [data-l="pt"]{display:none}
+  body.en [data-l="en"]{display:revert}
+  @media (max-width:760px){
+    nav .links{display:none}
+    .grid{grid-template-columns:1fr;gap:20px}
+    .cards{grid-template-columns:1fr}
+    dl{grid-template-columns:1fr;gap:2px}
+    dd{margin-bottom:14px}
+    .hero{padding:80px 0 72px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><i class="bar"></i><span>IDEIAS EXIGENTES</span></a>
+    <nav>
+      <span class="links" style="display:flex;gap:28px">
+        <a href="#empresa"><span data-l="pt">Empresa</span><span data-l="en">Company</span></a>
+        <a href="#marca"><span data-l="pt">IDTECHX</span><span data-l="en">IDTECHX</span></a>
+        <a href="#contacto"><span data-l="pt">Contacto</span><span data-l="en">Contact</span></a>
+      </span>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
+        <button id="b-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow"><span data-l="pt">Desenvolvimento de software · Portugal</span><span data-l="en">Software development · Portugal</span></p>
+    <h1><span data-l="pt">Software independente, feito com exigência.</span><span data-l="en">Independent software, built to a higher standard.</span></h1>
+    <p class="lead">
+      <span data-l="pt">A Ideias Exigentes é uma empresa portuguesa que desenha e desenvolve aplicações para Mac, iPhone e web — ferramentas práticas, bem pensadas e feitas para durar.</span>
+      <span data-l="en">Ideias Exigentes is a Portuguese company that designs and builds applications for Mac, iPhone and the web — practical, well-considered tools made to last.</span>
+    </p>
+    <div class="rule"></div>
+  </div>
+
+  <section id="empresa">
+    <div class="wrap grid">
+      <h2><span data-l="pt">A empresa</span><span data-l="en">The company</span></h2>
+      <div class="content">
+        <p><span data-l="pt">Fundada em Portugal, a Ideias Exigentes Unipessoal Lda dedica-se ao desenvolvimento de software e de produtos digitais próprios. Trabalhamos do conceito ao lançamento: design de produto, engenharia, infraestrutura na cloud e suporte.</span><span data-l="en">Founded in Portugal, Ideias Exigentes Unipessoal Lda develops software and its own digital products. We work from concept to launch: product design, engineering, cloud infrastructure and support.</span></p>
+        <p><span data-l="pt">Acreditamos em aplicações simples de usar, que respeitam a privacidade de quem as utiliza e resolvem problemas concretos.</span><span data-l="en">We believe in apps that are simple to use, respect their users' privacy and solve real problems.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="marca">
+    <div class="wrap grid">
+      <h2>IDTECHX</h2>
+      <div class="content">
+        <p><span data-l="pt">As aplicações da Ideias Exigentes são publicadas sob a marca <strong>IDTECHX</strong>, que reúne plataformas que combinam infraestrutura na cloud, inteligência artificial e design intuitivo.</span><span data-l="en">Ideias Exigentes publishes its applications under the <strong>IDTECHX</strong> brand, which brings together platforms combining cloud infrastructure, artificial intelligence and intuitive design.</span></p>
+        <div class="cards">
+          <div class="card"><h3>Constria</h3><p><span data-l="pt">Gestão de obras: projetos, equipas, fornecedores e documentação.</span><span data-l="en">Construction management: projects, teams, suppliers and documents.</span></p></div>
+          <div class="card"><h3>NeuralShelf</h3><p><span data-l="pt">Biblioteca pessoal com IA para organizar conhecimento e leituras.</span><span data-l="en">An AI-powered personal library for knowledge and reading.</span></p><span class="tag"><span data-l="pt">Em breve</span><span data-l="en">Coming soon</span></span></div>
+          <div class="card"><h3>FundFrame</h3><p><span data-l="pt">Finanças pessoais: orçamentos e análise financeira.</span><span data-l="en">Personal finance: budgeting and financial insights.</span></p><span class="tag"><span data-l="pt">Em breve</span><span data-l="en">Coming soon</span></span></div>
+        </div>
+        <a class="btn" href="https://idtechx.app" rel="noopener"><span data-l="pt">Visitar idtechx.app</span><span data-l="en">Visit idtechx.app</span> →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap grid">
+      <h2><span data-l="pt">Contacto</span><span data-l="en">Contact</span></h2>
+      <div class="content">
+        <dl>
+          <dt>Email</dt><dd><a href="mailto:info@ideiasexigentes.com">info@ideiasexigentes.com</a></dd>
+          <dt><span data-l="pt">Morada</span><span data-l="en">Address</span></dt><dd>Rua dos Ciprestes, Lote 21, Quelfes<br>8700-581 Olhão, Portugal</dd>
+          <dt><span data-l="pt">Empresa</span><span data-l="en">Legal entity</span></dt><dd>Ideias Exigentes Unipessoal Lda</dd>
+          <dt>NIF / VAT</dt><dd>PT 517545853</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="y">2026</span> Ideias Exigentes Unipessoal Lda · NIF 517545853 · Rua dos Ciprestes, Lote 21, Quelfes, 8700-581 Olhão, Portugal</div>
+    <div><a href="/privacidade.html"><span data-l="pt">Política de Privacidade</span><span data-l="en">Privacy Policy</span></a></div>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.classList.toggle('en', l==='en');
+    document.documentElement.lang = l;
+    document.getElementById('b-pt').classList.toggle('on', l==='pt');
+    document.getElementById('b-en').classList.toggle('on', l==='en');
+    try{localStorage.setItem('lang', l)}catch(e){}
+  }
+  document.getElementById('y').textContent = new Date().getFullYear();
+  var saved; try{saved=localStorage.getItem('lang')}catch(e){}
+  setLang(saved || ((navigator.language||'pt').toLowerCase().startsWith('pt') ? 'pt' : 'en'));
+</script>
+</body>
+</html>
